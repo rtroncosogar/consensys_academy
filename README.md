@@ -19,6 +19,7 @@ To work properly, you will need this software:
 In the root directory, you must open a console and run:
 ```
 sudo su - 
+cp /etc/hosts{,.back}
 echo "127.0.0.1 www.clpt.cl" >> /etc/hosts
 exit
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
@@ -32,10 +33,15 @@ Go to the folder "web" and run (again)
 npm install
 sudo PORT=80 npm run dev 
 
-First: test...
-In a local way:
+# First: test...
+# In a local way:
 ./launchGanache.bash
 truffle test --reset --network ganache
+
+# After finished local tests, restore hosts file to previous version
+sudo su -
+cp /etc/hosts.back /etc/hosts
+exit
 ```
 
 
@@ -62,4 +68,4 @@ available in the list.
 
 #Live Version:
 
-There's a live version, before to visit this one, release the port 80 hosted at [this link](http://www.clpt.cl)
+There's a live version, before to visit this one, release the port 80 hosted at [this link](http://54.233.197.195)
