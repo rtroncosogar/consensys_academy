@@ -29,7 +29,7 @@ sudo systemctl start mongodb
 npm install 
 Go to the folder "web" and run (again)
 npm install
-sudo PORT=3000 npm run dev 
+sudo PORT=80 npm run dev 
 
 First: test...
 In a local way:
