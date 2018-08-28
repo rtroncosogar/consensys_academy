@@ -62,4 +62,4 @@ available in the list.
 
 #Live Version:
 
-There's a live version, hosted at [this link](http://www.clpt.cl)
+There's a live version, before to visit this one, release the port 80 hosted at [this link](http://www.clpt.cl)
