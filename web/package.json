@@ -1,0 +1,32 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ethjs": "^0.4.0",
+    "ethjs-account": "^0.1.4",
+    "express": "~4.16.0",
+    "formidable": "^1.2.1",
+    "http-errors": "~1.6.2",
+    "jquery": "^3.3.1",
+    "jsontokens": "^0.7.8",
+    "meta-auth": "^1.1.2",
+    "mongoose": "^5.2.9",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "truffle-hdwallet-provider": "0.0.6",
+    "truffle-hdwallet-provider-privkey": "^0.3.0",
+    "uport-connect": "^0.7.6",
+    "web3": "^1.0.0-beta.35",
+    "web3-auth": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}

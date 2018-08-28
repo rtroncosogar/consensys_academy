@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    title #{title}  
+    
+  body
+    h1 Your Account: #{user.wallet}
+    h2 You will be granted by #{days} days available to donate.
+    button(onclick="logout()") Logout
+    button(onclick="goHome()") Home
+    br
+    br
+    p The transaction is: 
+    a(href="https://rinkeby.etherscan.io/tx/" + txCode) #{txCode}
+
+    //button(onclick="loginDonor()") Login as Donor
+    //button(onclick="loginRequestor()") Login as Requestor
+
+    script(src='/assets/js/jquery.min.js')
+    script(src='/assets/js/popper.min.js')
+    script(src='/assets/js/bootstrap.min.js')
+    script(src='/assets/js/slick.min.js')
+    script(src='/assets/js/jquery.mb.YTPlayer.min.js')
+    script(src='/assets/js/jquery.waypoints.min.js')
+    script(src='/assets/js/jquery.easing.1.3.js')
+    script(src='/assets/js/main.js')
+    script(src='/bundle.js')
+    script(type='text/javascript').
+        function logout() {
+            $.get('http://www.clpt.cl/home/logout?auth=#{user.authToken}&&account=#{user.wallet}', (res) => {
+                if(res.wallet == "#{user.wallet}") {
+                    window.location.href = "/";
+                } else {
+                    // nothing
+                }
+            });
+        }
+
+        function goHome() {
+            $.get('http://www.clpt.cl/home?auth=#{user.authToken}&&account=#{user.wallet}&&back=true', (res) => {
+                if(res.wallet == "#{user.wallet}") {
+                    window.location.href = "/home?auth=#{user.authToken}&&account=#{user.wallet}";
+                } else {
+                    // nothing
+                }
+            });
+        }
