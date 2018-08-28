@@ -20,7 +20,7 @@ In the root directory, you must open a console and run:
 npm install 
 Go to the folder "web" and run (again)
 npm install
-PORT=3000 npm run dev 
+sudo PORT=3000 npm run dev 
 
 First: test...
 In a local way:
