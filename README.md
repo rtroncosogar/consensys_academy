@@ -17,6 +17,11 @@ To work properly, you will need this software:
 #How to use:
 
 In the root directory, you must open a console and run:
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo systemctl start mongodb
 npm install 
 Go to the folder "web" and run (again)
 npm install
