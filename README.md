@@ -32,7 +32,7 @@ sudo PORT=3000 npm run dev
 
 First: test...
 In a local way:
-
+./launchGanache.bash
 truffle test --reset --network ganache
 
 
