@@ -17,6 +17,7 @@ To work properly, you will need this software:
 #How to use:
 
 In the root directory, you must open a console and run:
+```
 sudo su - 
 echo "127.0.0.1 www.clpt.cl" >> /etc/hosts
 exit
@@ -34,7 +35,7 @@ First: test...
 In a local way:
 ./launchGanache.bash
 truffle test --reset --network ganache
-
+```
 
 
 
